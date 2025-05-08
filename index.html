@@ -56,7 +56,6 @@
             </a>
           </span>
 
-
           <!-- SCANnotate++ GitHub -->
           <span class="link-block">
             <a href="https://github.com/stefan-ainetter/SCANnotatepp/tree/main" target="_blank"
@@ -111,8 +110,26 @@
         <h2 class="title is-3">Method Overview</h2>
         <img src="./static/images/overview.png" class="interpolation-image" alt="Method overview">
         <p>
-          Our automatic annotation pipeline is based on our previous works HOC-Search and Scannotate. It performs joint optimization over discrete CAD model candidates and their poses using Monte Carlo Tree Search. The result is the SCANnotate++ dataset with high-quality shape and pose annotations.
-        </p>
+            Our pipeline begins with an RGB-D scan and the corresponding 3D instance segmentation labels. We extract bounding boxes
+            for each segmented object and use them to initialize coarse object poses.
+          </p>
+          <p>
+            We then perform <strong>CAD model retrieval and pose estimation</strong> using <a href="https://github.com/stefan-ainetter/HOC-Search" target="_blank">HOC-Search</a>, an algorithm that conducts joint discrete and continuous optimization
+            over shape and pose parameters. It searches a tree-structured index of CAD models (the <em>HOC-Tree</em>) built from ShapeNet
+            using shape similarity clustering, and iteratively refines pose using a differentiable render-and-compare loss.
+          </p>
+          <p>
+            The objective function used during optimization combines <em>depth similarity</em>, <em>silhouette overlap</em>, and <em>chamfer distance</em>
+            between the observed data and rendered CAD models. Gradient-based refinement improves pose alignment after each search iteration.
+          </p>
+          <p>
+            To increase annotation consistency, we include a <strong>clustering and cloning stage</strong> where objects of the same class and
+            similar shape within a scene are assigned the same CAD model. Final poses for cloned instances are then re-optimized.
+          </p>
+          <p>
+            Finally, all annotations undergo <strong>manual quality verification</strong>. Erroneous alignments are corrected and the pose refinement
+            is re-run to ensure high fidelity of the final SCANnotate++ dataset.
+          </p>
       </div>
     </div>
   </div>
