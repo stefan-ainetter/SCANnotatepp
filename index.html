@@ -146,16 +146,32 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Experiments and Results</h2>
-        <img src="./static/images/experiments.png" class="interpolation-image" alt="Experiments">
-        <div class="content has-text-justified">
-          <p>
-            We evaluate SCANnotate++ annotations on two tasks: supervised point cloud completion and CAD model retrieval and alignment. Models trained on our annotations outperform those trained on manual annotations from Scan2CAD, validating the quality of our dataset.
-          </p>
-        </div>
+          <!-- <img src="./static/images/experiments.png" class="interpolation-image" alt="Experiments"> -->
+          <div class="content has-text-justified">
+            <p>
+              We evaluate SCANnotate++ annotations on two tasks: supervised point cloud completion and CAD model retrieval and alignment. Models trained on our annotations outperform those trained on manual annotations from Scan2CAD, validating the quality of our dataset.
+            </p>
+          </div>
+          <h3 class="title is-4">Point Cloud Completion</h3>
+          <div class="content has-text-justified">
+            <img src="./static/images/ptcomplet.png" class="interpolation-pdf" alt="Point Cloud completion">
+            <p>
+              Given an input partial point cloud of objects in ScanNet and ScanNet++, we want to reconstruct the missing 3D points. We use automatic annotations from SCANnotate and SCANnotate++ to generate complete point clouds as ground truth for supervised learning of point cloud completion and present our visual results in the above figure.
+            </p>
+          </div>
+          <h3 class="title is-4">CAD Model Retrieval and Alignment</h3>
+          <div class="content has-text-justified">
+            <img src="./static/images/roca.png" class="interpolation-image" alt="CAD Model Retrieval and Alignment">
+            <p>
+              Given a single image, we want to retrieve and align 3D CAD models, across the target categories. <a href="https://github.com/cangumeli/ROCA?tab=readme-ov-file" target="_blank">ROCA</a> is a framework that, from a single image, retrieves and aligns CAD models from a pool of per-scene objects. 
+              We train ROCA using both SCANnotate and SCANnotate++, and present the visual results in the figure above. 
+            </p>
+          </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
