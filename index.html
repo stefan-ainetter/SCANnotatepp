@@ -150,6 +150,7 @@
           <div class="content has-text-justified">
             <p>
               We evaluate SCANnotate++ annotations on two tasks: supervised point cloud completion and CAD model retrieval and alignment. Models trained on our annotations outperform those trained on manual annotations from Scan2CAD, validating the quality of our dataset.
+              The training and testing code will be made publicly available shortly.
             </p>
           </div>
           <h3 class="title is-4">Point Cloud Completion</h3>
@@ -157,6 +158,8 @@
             <img src="./static/images/ptcomplet.png" class="interpolation-pdf" alt="Point Cloud completion">
             <p>
               Given an input partial point cloud of objects in ScanNet and ScanNet++, we want to reconstruct the missing 3D points. We use automatic annotations from SCANnotate and SCANnotate++ to generate complete point clouds as ground truth for supervised learning of point cloud completion and present our visual results in the above figure.
+              Top row shows partial point cloud input, middle row shows the reconstructed point cloud, and bottom row shows the ground
+truth point cloud. 
             </p>
           </div>
           <h3 class="title is-4">CAD Model Retrieval and Alignment</h3>
