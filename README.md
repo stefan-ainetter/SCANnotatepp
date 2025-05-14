@@ -1,7 +1,9 @@
 # The SCANnotate++ Dataset
 
 <p align="center">
-<img src="figures/annotations.png" width="100%"/>
+<img src="figures/annotations.png" width="90%"/>
+<br>
+<a href="https://arxiv.org/abs/2504.13580">arXiv</a>
 </p>
 
 This repository provides CAD model and pose annotations for objects in the ScanNet++v1 dataset. The annotations were automatically generated 
@@ -81,27 +83,13 @@ bash visualize_annotations.sh
 ```
 
 ## Citation
-To create these annotations, we used the CAD model retrieval pipeline from 
-[SCANnotate](https://github.com/stefan-ainetter/SCANnotate), but replaced the exhaustive
-CAD retrieval stage with [HOC-Search](https://github.com/stefan-ainetter/HOC-Search). 
-If you use any of the provided code or data, please cite the following works:
+If you find our dataset useful, please consider citing our paper:
 
-Scannotate:
 ```bibtex
-@inproceedings{ainetter2023automatically,
-  title={Automatically Annotating Indoor Images with CAD Models via RGB-D Scans},
-  author={Ainetter, Stefan and Stekovic, Sinisa and Fraundorfer, Friedrich and Lepetit, Vincent},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={3156--3164},
-  year={2023}
-}
-```
-HOC-Search:
-```bibtex
-@inproceedings{ainetter2024hocsearch,
-      title={HOC-Search: Efficient CAD Model and Pose Retrieval From RGB-D Scans}, 
-      author={Stefan Ainetter and Sinisa Stekovic and Friedrich Fraundorfer and Vincent Lepetit},
-      booktitle = {International Conference on 3D Vision (3DV)},
-      year={2024}
+@article{rao2025leveraging,
+  author    = {Rao, Yuchen and Ainetter, Stefan and Stekovic, Sinisa and Lepetit, Vincent and Fraundorfer, Friedrich},
+  title     = {Leveraging Automatic CAD Annotations for Supervised Learning in 3D Scene Understanding},
+  journal   = {arXiv preprint arXiv:2504.13580},
+  year      = {2025}
 }
 ```
