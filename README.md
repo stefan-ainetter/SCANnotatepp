@@ -32,7 +32,7 @@ to generate clean CAD models which are then compatible with our annotations.
 
 
 ### Preliminaries: Download ShapeNet and ScanNet++v1 examples
-* Download the ScanNet++v1 example scene [here](https://cloud.tugraz.at/index.php/s/NA7icqiJ5SeNSA6/download?path=%2FScannotatepp%2FScanNetpp_example&files=30966f4c6e.zip). Extract the data
+* Download the ScanNet++v1 example scene [here](https://cloud.tugraz.at/index.php/s/NA7icqiJ5SeNSA6?dir=/Scannotatepp/ScanNetpp_example). Extract the data
 and copy them to `./data/ScanNetpp/data`. Note that by downloading this example data
 you agree to the [ScanNet++ Terms of Use](https://kaldir.vc.in.tum.de/scannetpp/static/scannetpp-terms-of-use.pdf). 
 To download the full ScanNet++ dataset follow the instructions on the [ScanNet++ webpage](https://kaldir.vc.in.tum.de/scannetpp/).
@@ -41,7 +41,7 @@ To download the full ScanNet++ dataset follow the instructions on the [ScanNet++
 on the website. Extract ShapeNetCore.v2.zip to `./data/ShapeNet`.
 
 * Download our annotations for the ScanNet++v1 dataset 
-[here](https://cloud.tugraz.at/index.php/s/NA7icqiJ5SeNSA6/download?path=%2FScannotatepp%2FScannotatepp_annotations&files=ScanNetpp_annotations.zip). Extract the data and copy them to
+[here](https://cloud.tugraz.at/index.php/s/NA7icqiJ5SeNSA6?dir=/Scannotatepp/Scannotatepp_annotations). Extract the data and copy them to
 `./data/ScanNetpp/annotations`.
 
 #### Preprocessing ShapeNet CAD Models
